@@ -14,6 +14,7 @@ int quick_select(int A[], int n, int k){
 
 // 先頭の要素をピボットとする
   pivot = A[0];
+  printf("A[0]%d\n",A[0]);
   for(i = j = 1; i < n; i++){
     if(A[i] <= pivot){
       int z = A[j];
@@ -36,7 +37,7 @@ int main(){
     A[i] = (long long int) A[i-1] * A[1] % N;
   }
   for(i=0;i<N;i++){
-    if(quick_select(A, N, i) != i) printf("ERROR %d %d\n", i, quick_select(A, N, i));
+    if(quick_select(A, N, i) == i) printf("OK %d\n", quick_select(A, N, i));
 //    printf("%d th element is %d\n", i, quick_select(A, N, i));
   }
 }
