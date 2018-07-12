@@ -26,7 +26,7 @@ void quick_sort(int A[], int n){
         }
         A[j-1] = pivot;
         quick_sort(A+j, n-j);
-        quick_sort(A,j);
+        quick_sort(A,j-1);
     }
 }
 
