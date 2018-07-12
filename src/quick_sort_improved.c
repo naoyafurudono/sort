@@ -32,7 +32,7 @@ void quick_sort(int A[], int n){
            }
            //A[i] == pivotのときは、何もしないで次に進む
        }
-       quick_sort(A, l+1);
+       quick_sort(A, l);
        quick_sort(A+r, n-r);
    }
 
